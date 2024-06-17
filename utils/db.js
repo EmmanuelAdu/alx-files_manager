@@ -1,5 +1,4 @@
 import mongodb from 'mongodb';
-import Collection from 'mongodb/lib/collection';
 
 class DBClient {
   constructor() {
