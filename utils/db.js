@@ -50,6 +50,11 @@ class DBClient {
   async filesCollection() {
     return this.isClient.db().collection('files');
   }
+
+  async getUserById(id) {
+    return this.isClient.db().collection('users')
+      .findOne({ _id: new mongodb.ObjectId(id) });
+  }
 }
 
 export const dbClient = new DBClient();
